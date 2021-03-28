@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "name": "Сергей",
+      "lastName": "Стефанов",
+      "gender": "Male",
+      "age": 12,
+      "email": "stefanovsergey.2000@gmail.com",
+      "pwd": "qwer",
+      "confirmPwd": "qwer",
+      "id": 1
+    },
+    {
+      "name": "Иван",
+      "lastName": "Алексеев",
+      "gender": "Male",
+      "age": 22,
+      "email": "stef.2000@gmail.com",
+      "pwd": "фыв",
+      "confirmPwd": "фыв",
+      "id": 2
+    },
+    {
+      "name": "Андрей",
+      "lastName": "Иванов",
+      "gender": "Male",
+      "age": 19,
+      "email": "novsergey.2000@gmail.com",
+      "pwd": "йц",
+      "confirmPwd": "йц",
+      "id": 3
+    },
+    {
+      "name": "Мария",
+      "lastName": "Иванова",
+      "gender": "Female",
+      "age": 23,
+      "email": "ssergey.2000@gmail.com",
+      "pwd": "ячс",
+      "confirmPwd": "ячс",
+      "id": 4
+    },
+    {
+      "name": "Сергей",
+      "lastName": "Стефанов",
+      "gender": "",
+      "age": 20,
+      "email": "stefanovsergey.2000@gmail.com",
+      "pwd": "йцу",
+      "confirmPwd": "йцу",
+      "id": 5
+    },
+    {
+      "name": "Галя",
+      "lastName": "Долова",
+      "gender": "Female",
+      "age": 20,
+      "email": "snovsergey.2000@gmail.com",
+      "pwd": "фыв",
+      "confirmPwd": "фыв",
+      "id": 6
+    },
+    {
+      "name": "Алексей",
+      "lastName": "Петров",
+      "gender": "Male",
+      "age": 24,
+      "email": "stefano2000@gmail.com",
+      "pwd": "йцу",
+      "confirmPwd": "йцу",
+      "id": 7
+    }
+  ]
+}

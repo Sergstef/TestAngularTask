@@ -1,0 +1,203 @@
+.box {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	margin: 0px auto;
+    min-height: 500px;
+	box-shadow: 0px 0px 25px 1px #656572;
+	max-width: 500px;
+	overflow: hidden;
+	display: flex;
+	position: absolute;
+	top: calc(50% - 300px);
+	left: 0;
+	right: 0;
+}
+
+.content {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.container {
+	
+}
+
+.signUpHeader {
+	background-color:#544EFD;
+}
+
+.signUpHeader__title {
+	color: white;
+	padding: 8px 0px 13px 13px;
+	font-size: 23px;
+}
+
+.signUpBody {
+	font-size: 14px;
+	flex: 1 1 auto;
+	background-color: white;
+	padding: 20px 30px 35px 15px;
+}
+
+.signUpBody form {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.signUpForm {
+	flex: 1 1 auto;
+}
+
+.signUpBody__row {
+	display: flex;
+	flex-direction: column;
+}
+
+.signUpBody__column {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.signUp__error__row {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.signUpBody__firstNameField {
+	flex: 1 1 50%;
+}
+
+.inputSome {
+	width: 100%;
+}
+
+.signUpBody__secondNameField {
+	flex: 0 1 50%;
+	padding: 0px 0px 0px 9px;
+}
+
+.signUpBody__genderField {
+	display: flex;
+	justify-content: space-between;
+	flex: 0 1 55%;
+
+}
+
+.signUpBody__ageField {
+	display: flex;
+	justify-content: flex-end;
+	flex: 0 1 45%;
+	padding: 0px 0px 0px 25px;
+}
+
+.signUpBody__ageField label {
+	margin-right: 40px;
+}
+
+.signUpBody__ageField input {
+	width: 70px;
+}
+
+.signUpBody__emailField {
+	width: 100%;
+}
+
+.signUpBody__emailField  label{
+	font-size: 10px;
+}
+
+.signUp_firstPass {
+	flex: 0 1 50%;
+}
+
+.signUp_firstPass  label {
+	font-size: 10px;
+}
+
+.signUp__confirmationPass  label {
+	font-size: 10px;
+}
+
+.signUp__confirmationPass {
+	flex: 0 1 50%;
+	padding: 0px 0px 0px 9px;
+}
+
+.signUpButton__row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.signUpButton__buttonField {
+	padding: 20px 0px 0px 0px;
+}
+ 
+.signUpButton__buttonField button{
+	background-color:#544EFD;
+	color: white;
+	width: 150px;
+	border-radius: 5px;
+	border: none;
+	padding: 4px;
+}
+
+
+
+
+.inputSome {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+
+.error {
+	color: red; 
+}
+
+
+
+@media (max-width: 500px) {
+	.box {
+		max-width: 350px;
+	}
+}
+
+@media (max-width: 350px) {
+	.box {
+		max-width: 250px;
+	}
+	.signUpBody__column {
+		flex-direction: column;
+	}
+	.signUp__error__row {
+		margin-bottom: 20px;
+	}
+	.signUpBody__secondNameField {
+		padding: 0px;
+	}
+	.signUpBody__genderField {
+		margin-bottom: 20px;
+	}
+	.signUpBody__ageField {
+		display: flex;
+		justify-content: flex-start;
+		padding: 0px;
+	}
+	.signUp_firstPass {
+		margin-bottom: 20px;
+	}
+	.signUp__confirmationPass {
+		padding: 0px;
+	}
+	.signUpBody__column: last-child{
+		margin-bottom: 0px;
+	}
+
+
+}

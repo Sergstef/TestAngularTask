@@ -1,0 +1,109 @@
+<div  class="box">
+	<div class="content">
+		<div class="signUpHeader">
+			<div class="container">
+				<div class="signUpHeader__row">
+					<div class="signUpHeader__title">Sign Up</div>
+				</div>
+			</div>
+		</div>
+		<div class="signUpBody">
+			<form name="mainForm" action="" #signupForm = "ngForm">
+				<div class="signUpForm">
+					<div class="signUpBody__row">
+						<div class="signUpBody__column">
+							<div class="signUp__error__row">
+								<div class="signUpBody__firstNameField">
+									<input #firstName="ngModel" class="inputSome" type="text" placeholder="First name" name="name" ngModel required>
+								</div>
+								<div class="error" *ngIf="firstName.dirty || firstName.touched">
+								    <div *ngIf = "firstName.errors?.required">
+								        First name field can't be blank
+								    </div>
+								</div>
+							</div>
+							<div class="signUp__error__row">
+								<div class="signUpBody__secondNameField">
+									<input #lastName="ngModel" class="inputSome" type="text" placeholder="Last name" name="lastName" ngModel required>
+								</div>
+								<div class="error" *ngIf="lastName.dirty || lastName.touched">
+								    <div *ngIf = "lastName.errors?.required">
+								        Second name field can't be blank
+								    </div>
+								</div>
+							</div>
+						</div>
+						<div class="signUpBody__column">
+							<div class="signUpBody__genderField">
+								<div class="labelForGender">
+									<label for="gender">Gender</label>
+								</div>
+								<div class="maleGender">
+									<input type="radio" name="gender" id="male" value="Male" ngModel checked>
+									<label for="male">Male</label>
+								</div>
+								<div class="femaleGender">
+									<input type="radio" name="gender" id="female" value="Female" ngModel>
+									<label for="female">Female</label>
+								</div>
+							</div>
+							<div class="signUpBody__ageField">
+								<label for="age">Age</label>
+								<input [ngModel]="20" #age="ngModel" class="inputSome" type="number" value="20" name="age" min="10" max="100" step="1" required>
+							</div>
+						</div>
+						<div class="signUpBody__column">
+							<div class="signUp__error__row">
+								<div class="signUpBody__emailField">
+									<label for="email">Email</label>
+									<input #email="ngModel" class="inputSome" type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" ngModel required>
+								</div>
+								<div class="error" *ngIf="email.invalid && (email.dirty || email.touched)">
+								    <div *ngIf = "email.errors?.required">
+								        Email field can't be blank
+								    </div>
+								    <div *ngIf = "email.errors?.pattern && email.touched">
+								        The email id doesn't seem right
+								    </div>
+								</div>
+							</div>
+						</div>
+						<div class="signUpBody__column">
+							<div class="signUp_firstPass">
+								<label for="pwd">Password</label><br>
+								<input #pwd="ngModel" class="inputSome" type="password" name="pwd" ngModel required>
+							</div>
+							<div class="signUp__confirmationPass">
+								<label for="confirmPwd">Confirm Password</label><br>
+								<input #confirmPwd="ngModel" class="inputSome" appConfirmEqualValidator="pwd" type="password" name="confirmPwd" ngModel required>
+							</div>
+						</div>
+						<div class="error" *ngIf="(pwd.invalid && (pwd.dirty || pwd.touched)) || (confirmPwd.invalid && (confirmPwd.dirty || confirmPwd.touched)) || (confirmPwd.touched && confirmPwd.errors?.notEqual && !confirmPwd.errors?.required)">
+							<div *ngIf = "pwd.errors?.required">
+								Password field can't be blank
+							</div>
+							<div *ngIf = "confirmPwd.errors?.required">
+								Password Confirm field can't be blank
+							</div>
+							<div *ngIf="confirmPwd.touched && confirmPwd.errors?.notEqual &&
+							    !confirmPwd.errors?.required">
+							  	Password and Confirm Password does not match
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="signUpButton">
+					<div class="container">
+						<div class="signUpButton__row">
+							<div class="signUpButton__buttonField">
+								<button type="button" (click)="addUser(signupForm.value)" [disabled]="signupForm.invalid" routerLink="../information">Sign Up</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</div>
+

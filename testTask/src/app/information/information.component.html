@@ -1,0 +1,37 @@
+<div>
+	<h1>Только что добавленный пользователь</h1>
+	<p>Name: {{allUsers[allUsers.length - 1].name}}</p>
+	<p>Last Name: {{allUsers[allUsers.length - 1].lastName}}</p>
+	<p>Gender: {{allUsers[allUsers.length - 1].gender}}</p>
+	<p>Age: {{allUsers[allUsers.length - 1].age}}</p>
+	<p>Email: {{allUsers[allUsers.length - 1].email}}</p>
+	<p>Password: {{allUsers[allUsers.length - 1].pwd}}</p>
+	<p>Confirmed Password: {{allUsers[allUsers.length - 1].confirmPwd}}</p>
+</div>
+<div>
+	<h1>Добавленные пользователи</h1>
+	<table class="table">
+		<thead>
+			<th scope="col">First name</th>
+			<th scope="col">Last name</th>
+			<th scope="col">Gender</th>
+			<th scope="col">Age</th>
+			<th scope="col">Email</th>
+			<th scope="col">Password</th>
+			<th scope="col">Confirmed password</th>
+		</thead>
+		<tbody>
+			<tr *ngFor="let user of allUsers">
+				<td>{{user.name}}</td>
+				<td>{{user.lastName}}</td>
+				<td>{{user.gender}}</td>
+				<td>{{user.age}}</td>
+				<td>{{user.email}}</td>
+				<td>{{user.pwd}}</td>
+				<td>{{user.confirmPwd}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<button type="button" routerLink="">Sign Up again</button>
+
